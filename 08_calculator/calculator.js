@@ -1,38 +1,41 @@
 const add = function(num1, num2) {
 	const total = num1 + num2;
-  console.log(total)
+  return total;
 };
 add(0,0)
 const subtract = function(num1, num2) {
-	let total = num1 - num2
+	const total = num1 - num2;
+  return total
 };
-subtract(10, 4)
+subtract(10,4)
+
 
 const sum = function(arr) {
-	let total = arr;
-  console.log(arr);
+	let total = arr.reduce((total, current)=> total + current,0)
+  return total
 };
 
-sum([]);
 
-const multiply = function(num1, num2) {
-  let total = num1 * num2
-  console.log(total);
+
+const multiply = function(arr) {
+  return arr.reduce((total, current)=> total + current)
 };
-multiply(2,4)
+
 
 const power = function(num, power) {
   let total = num**power;
-  console.log(total)
+  return total;
 };
-power(4,3)
 
-const factorial = function() {
-	for(let i = 0; ){
 
+const factorial = function(num) {
+  let total = 1;
+	for(let i = num; i > 0; i--){
+    total *= i
   }
+  return total;
 };
-factorial(0)
+
 
 // Do not edit below this line
 module.exports = {
